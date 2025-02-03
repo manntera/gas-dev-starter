@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "main": "index.js",
     "scripts": {
+        "init-gas": "node scripts/init-gas.js",
         "test": "echo \"Error: no test specified\" && exit 1",
         "build": "webpack",
         "deploy": "npm run build && clasp push",
