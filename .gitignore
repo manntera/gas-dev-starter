@@ -1,0 +1,5 @@
+node_modules
+dist/index.js
+dist/main.js
+.env
+.clasp.json
