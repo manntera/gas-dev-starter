@@ -1,4 +1,4 @@
-declare var process: {
+declare const process: {
     env: {
         SPREADSHEET_ID: string;
     };

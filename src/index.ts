@@ -1,5 +1,7 @@
-declare let global: any;
+declare global {
+    let main: () => void;
+}
 
-global.main = () => {
+main = () => {
     Logger.log('Hello, World!');
 };
