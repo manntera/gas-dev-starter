@@ -24,3 +24,6 @@ clasp login
 npm run deploy
 ```
 7. ブラウザでGASのプロジェクトページを開き、GASの実行ができる事を確認する。
+
+# メモ
+- @typescript-eslint/parserの影響によって、typescriptが5.2.0未満でないといけない。
