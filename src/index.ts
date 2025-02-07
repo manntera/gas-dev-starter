@@ -1,6 +1,6 @@
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 declare let global: any;
 
-global.main = () => {
+globalThis.main = () => {
     Logger.log('Hello, World!');
 };

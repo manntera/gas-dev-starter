@@ -1,10 +1,11 @@
 {
     "compilerOptions": {
-        "target": "ES2019",
+        "target": "ESNext", // 最新の構文を許容（型チェック用）
         "lib": [
-            "es2019"
-        ],
-        "module": "commonjs",
+            "esnext",
+            "dom"
+        ], // GAS 開発で必要なブラウザ（DOM）と最新の ECMAScript API
+        "module": "commonjs", // GAS では実際のモジュール解決は Babel と Webpack で行うため
         "strict": true,
         "esModuleInterop": true,
         "skipLibCheck": true,
@@ -16,7 +17,7 @@
         "types": [
             "google-apps-script",
             "./global"
-        ],
+        ]
     },
     "include": [
         "src/**/*.ts"

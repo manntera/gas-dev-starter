@@ -4,8 +4,9 @@
             "@babel/preset-env",
             {
                 "targets": {
-                    "esmodules": true
-                }
+                    "chrome": "70"
+                },
+                "modules": false
             }
         ],
         "@babel/preset-typescript"
