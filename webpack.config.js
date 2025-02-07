@@ -1,6 +1,5 @@
 const path = require('path');
 const GasPlugin = require('gas-webpack-plugin');
-const Es3ifyPlugin = require('es3ify-webpack-plugin');
 const dotenv = require('dotenv');
 const webpack = require('webpack');
 
@@ -29,7 +28,7 @@ module.exports = {
         ]
     },
     plugins: [
-        new GasPlugin(), new Es3ifyPlugin(),
+        new GasPlugin(),
         new webpack.DefinePlugin({
             'process.env': JSON.stringify(env),
         }),
