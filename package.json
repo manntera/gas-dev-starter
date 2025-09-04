@@ -4,7 +4,7 @@
     "version": "1.0.0",
     "main": "index.js",
     "scripts": {
-        "init-gas": "node scripts/init-gas.js",
+        "init-gas": "node scripts/init-gas.cjs",
         "test": "echo \"Error: no test specified\" && exit 1",
         "build": "webpack",
         "deploy": "npm run build && clasp push",
@@ -17,23 +17,22 @@
     "description": "",
     "dependencies": {
         "@google/clasp": "^2.5.0",
-        "dotenv": "^16.4.7",
-        "typescript-eslint": "^8.23.0"
+        "dotenv": "^17.2.2"
     },
     "devDependencies": {
-        "@babel/core": "^7.26.7",
-        "@babel/preset-env": "^7.26.7",
-        "@babel/preset-typescript": "^7.26.0",
-        "@types/google-apps-script": "^1.0.93",
-        "@typescript-eslint/eslint-plugin": "^8.23.0",
-        "@typescript-eslint/parser": "^8.23.0",
-        "babel-loader": "^9.2.1",
+        "@babel/core": "^7.28.3",
+        "@babel/preset-env": "^7.28.3",
+        "@babel/preset-typescript": "^7.27.1",
+        "@types/google-apps-script": "^2.0.1",
+        "@typescript-eslint/eslint-plugin": "^8.42.0",
+        "@typescript-eslint/parser": "^8.42.0",
+        "babel-loader": "^10.0.0",
         "es3ify-webpack-plugin": "^0.1.0",
-        "eslint": "^9.19.0",
+        "eslint": "^9.34.0",
         "eslint-plugin-googleappsscript": "^1.0.5",
         "gas-webpack-plugin": "^2.6.0",
-        "typescript": "~5.7.3",
-        "webpack": "^5.97.1",
+        "typescript": "~5.9.2",
+        "webpack": "^5.101.3",
         "webpack-cli": "^6.0.1"
     },
     "eslintConfig": {
