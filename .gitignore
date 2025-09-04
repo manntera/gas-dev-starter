@@ -1,5 +1,4 @@
 node_modules
-dist/index.js
-dist/main.js
+dist/
 .env
 .clasp.json

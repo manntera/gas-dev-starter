@@ -5,7 +5,9 @@
             "esnext",
             "dom"
         ], // GAS 開発で必要なブラウザ（DOM）と最新の ECMAScript API
-        "module": "commonjs", // GAS では実際のモジュール解決は Babel と Webpack で行うため
+        "module": "ESNext", // 型チェックではESM、実際の変換はBabel/webpackに委譲
+        "moduleResolution": "Bundler",
+        "noEmit": true, // tscは型チェックのみ
         "strict": true,
         "esModuleInterop": true,
         "skipLibCheck": true,
@@ -15,8 +17,7 @@
             "src/@types"
         ],
         "types": [
-            "google-apps-script",
-            "./global"
+            "google-apps-script"
         ]
     },
     "include": [

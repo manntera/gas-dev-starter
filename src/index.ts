@@ -1,5 +1,8 @@
-declare let global: any;
+declare const global: any;
 
-global.main = () => {
+export const main = (): void => {
     Logger.log('Hello, World!');
 };
+
+// 念のため手動でGASのグローバルへ公開
+global.main = main;

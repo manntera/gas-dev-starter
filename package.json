@@ -7,27 +7,35 @@
         "init-gas": "node scripts/init-gas.cjs",
         "test": "echo \"Error: no test specified\" && exit 1",
         "build": "webpack",
-        "deploy": "npm run build && clasp push",
+        "build:prod": "cross-env NODE_ENV=production webpack",
+        "deploy": "npm run build:prod && clasp push",
         "watch": "webpack --watch",
-        "lint": "eslint \"src/**/*.{ts,js}\""
+        "lint": "eslint .",
+        "lint:fix": "eslint . --fix",
+        "typecheck": "tsc --noEmit -p tsconfig.json",
+        "login": "clasp login",
+        "open": "clasp open",
+        "pull": "clasp pull",
+        "version": "clasp version 'release'",
+        "release": "npm run build:prod && clasp push && npm run version"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
-    "description": "",
-    "dependencies": {
-        "@google/clasp": "^2.5.0",
-        "dotenv": "^17.2.2"
-    },
+    "description": "Google Apps Script TypeScript starter with webpack + clasp",
+    "dependencies": {},
     "devDependencies": {
         "@babel/core": "^7.28.3",
         "@babel/preset-env": "^7.28.3",
         "@babel/preset-typescript": "^7.27.1",
+        "@google/clasp": "^2.5.0",
         "@types/google-apps-script": "^2.0.1",
         "@typescript-eslint/eslint-plugin": "^8.42.0",
         "@typescript-eslint/parser": "^8.42.0",
         "babel-loader": "^10.0.0",
-        "es3ify-webpack-plugin": "^0.1.0",
+        "copy-webpack-plugin": "^12.0.2",
+        "cross-env": "^7.0.3",
+        "dotenv": "^17.2.2",
         "eslint": "^9.34.0",
         "eslint-plugin-googleappsscript": "^1.0.5",
         "gas-webpack-plugin": "^2.6.0",
@@ -35,34 +43,7 @@
         "webpack": "^5.101.3",
         "webpack-cli": "^6.0.1"
     },
-    "eslintConfig": {
-        "parser": "@typescript-eslint/parser",
-        "parserOptions": {
-            "ecmaVersion": 2019,
-            "sourceType": "module"
-        },
-        "plugins": [
-            "@typescript-eslint",
-            "googleappsscript"
-        ],
-        "extends": [
-            "eslint:recommended",
-            "plugin:@typescript-eslint/recommended"
-        ],
-        "env": {
-            "browser": true,
-            "node": true,
-            "googleappsscript/googleappsscript": true
-        },
-        "overrides": [
-            {
-                "files": [
-                    "src/index.ts"
-                ],
-                "rules": {
-                    "no-unused-vars": "off"
-                }
-            }
-        ]
+    "engines": {
+        "node": ">=18"
     }
 }
